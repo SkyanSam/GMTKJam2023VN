@@ -1,0 +1,36 @@
+-> story1a
+
+=== story1a ===
+
+Heraldus: “Hey, (name of player), you’re finally awake.”
+
+
++ “Yeah, how soon until we land?”
+
+    Heraldus: “No more than an hour. These gyro-powered planes are
+        pretty fast. Can’t wait to see the Nests, huh?”
+    
+    "What are the nests?"
+    -> story1b
+
++ “Where... where is this?”
+
+    Heraldus: “It’s... a plane? You know, the army’s plane? As in the plane
+        that’s taking us soldiers all the way to the Nests.”
+        
+    "What are the nests?"
+    -> story1b
+
++ “Oh my god I’m in a freaking plane.”
+    Heraldus: “Yeah? Are you feeling okay? Hit your head or something?
+        Just don’t let the general find out or she’ll have you taken out of the Nest mission.”
+    
+    “The Nest mission?”
+    -> story1b
+
+=== story1b ===
+Heraldus: “Yeah, you know, the Nests? Weird mutant bugs that somehow colonized
+    a continent? They seem to be assembling a weapon of some sort, so
+    it’s our job to wipe them all out.”
+    
+-> DONE
