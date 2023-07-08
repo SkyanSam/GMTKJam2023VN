@@ -6,8 +6,7 @@ using System.Collections.Generic;
 
 public class StoryManager : Node2D
 {
-	public static StoryManager instance;
-	public Story story;
+	Story story;
 	// Declare member variables here. Examples:
 	// private int a = 2;
 	// private string b = "text";
@@ -19,7 +18,7 @@ public class StoryManager : Node2D
 	bool storyActive = false;
 	public override void _Ready() 
 	{
-		instance = this;
+		
 	}
 	public void Next()
 	{
