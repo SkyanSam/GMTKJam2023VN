@@ -1,18 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Dialogue/dialogue.theme" type="Theme" id=1]
 [ext_resource path="res://Dialogue/ChoiceBox.gd" type="Script" id=2]
 [ext_resource path="res://Dialogue/DialoguePanel.gd" type="Script" id=3]
 [ext_resource path="res://Dialogue/DialogueUILayer.gd" type="Script" id=4]
+[ext_resource path="res://fonts/hustlers75.tres" type="DynamicFont" id=5]
 
 [node name="DialogueUILayer" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 theme = ExtResource( 1 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ChoiceBox" type="VBoxContainer" parent="."]
 visible = false
@@ -32,29 +30,29 @@ __meta__ = {
 }
 
 [node name="DialoguePanel" type="Panel" parent="."]
-visible = false
+self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 146.224
 margin_top = 30.0
 margin_right = 1766.22
 margin_bottom = 360.0
 theme = ExtResource( 1 )
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 new_character_interval = 0.02
 
-[node name="DialogueLabel" type="Label" parent="DialoguePanel"]
-margin_top = -2.0
-margin_right = 1620.0
-margin_bottom = 327.0
-theme = ExtResource( 1 )
-text = "Heraldus: What the hell are you doing Skyan? Get this game done already!! Sheesh.."
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Timer" type="Timer" parent="DialoguePanel"]
+
+[node name="DialogueLabel" type="RichTextLabel" parent="DialoguePanel"]
+margin_left = 446.0
+margin_top = 779.0
+margin_right = 1495.0
+margin_bottom = 1051.0
+custom_fonts/bold_font = ExtResource( 5 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[color=#4b371c]Character Name[/color]
+[color=#795c34]character dialogue[/color]"
+text = "Character Name
+character dialogue"
+scroll_active = false
 
 [connection signal="timeout" from="DialoguePanel/Timer" to="DialoguePanel" method="_on_Timer_timeout"]

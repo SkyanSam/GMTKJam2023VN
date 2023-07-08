@@ -40,8 +40,8 @@ public class StoryManager : Node2D
 	public void ExitStory()
 	{
 		dialogueUILayer.Call("hide");
-		var player = (Node)GetNode(new NodePath("/root/Global")).Get("player");
-		player.Set("move_to_target", false);
+		//var player = (Node)GetNode(new NodePath("/root/Global")).Get("player");
+		//player.Set("move_to_target", false);
 		storyActive = false;
 		GD.Print("Exiting Story");
 	}
