@@ -8,14 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "InventoryItem",
+"language": "GDScript",
+"path": "res://Inventory/Items/InventoryItem.gd"
+} ]
+_global_script_class_icons={
+"InventoryItem": ""
+}
+
 [application]
 
-config/name="Dialogue Based Game"
+config/name="GMTKJam2023VN"
 config/icon="res://icon.png"
 
-[autoload]
+[gui]
 
-Global="*res://Global.gd"
+common/drop_mouse_on_gui_input_disabled=true
+
+[mono]
+
+project/assembly_name="GMTKJam2023VN"
 
 [physics]
 

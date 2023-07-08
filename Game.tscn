@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Dialogue/DialogueUILayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Dialogue/StoryManager/StoryManager.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StoryManager" parent="." instance=ExtResource( 2 )]
+
+[node name="DialogueUILayer" parent="." instance=ExtResource( 1 )]
