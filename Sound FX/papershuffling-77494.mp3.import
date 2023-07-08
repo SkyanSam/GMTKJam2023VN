@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/papershuffling-77494.mp3-e2376b794dfb45b1116e000e20e26323.mp3str"
+
+[deps]
+
+source_file="res://Sound FX/papershuffling-77494.mp3"
+dest_files=[ "res://.import/papershuffling-77494.mp3-e2376b794dfb45b1116e000e20e26323.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
