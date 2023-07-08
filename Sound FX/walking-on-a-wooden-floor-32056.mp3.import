@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/walking-on-a-wooden-floor-32056.mp3-9d7224f5df194028dc88ab84b88fec50.mp3str"
+
+[deps]
+
+source_file="res://Sound FX/walking-on-a-wooden-floor-32056.mp3"
+dest_files=[ "res://.import/walking-on-a-wooden-floor-32056.mp3-9d7224f5df194028dc88ab84b88fec50.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

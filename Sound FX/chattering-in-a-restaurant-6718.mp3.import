@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chattering-in-a-restaurant-6718.mp3-d6bbf4073d7ba73744794ff43d87d554.mp3str"
+
+[deps]
+
+source_file="res://Sound FX/chattering-in-a-restaurant-6718.mp3"
+dest_files=[ "res://.import/chattering-in-a-restaurant-6718.mp3-d6bbf4073d7ba73744794ff43d87d554.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

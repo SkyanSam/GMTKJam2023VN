@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wood-creak-single-v3-14657.mp3-b2d794eadb0376c57ff2bc48bc9e39c0.mp3str"
+
+[deps]
+
+source_file="res://Sound FX/wood-creak-single-v3-14657.mp3"
+dest_files=[ "res://.import/wood-creak-single-v3-14657.mp3-b2d794eadb0376c57ff2bc48bc9e39c0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
