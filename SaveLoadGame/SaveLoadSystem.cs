@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,10 +9,10 @@ namespace GMTKJam2023VN
 {
     public class SaveSystem : Node2D
     {
-        public void Save()
+        public void Save(int number = 0)
         {
             var file = new Godot.File();
-            file.Open("user://storydata.txt", Godot.File.ModeFlags.Write);
+            file.Open("user://save" + number + "story.txt", Godot.File.ModeFlags.Write);
             file.StoreString(StoryManager.instance.story.state.ToJson());
             file.Close();
         }

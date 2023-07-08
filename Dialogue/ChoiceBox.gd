@@ -17,8 +17,6 @@ func _ready():
 	print("CHOICE BOX SUCCESS!!")
 	print("CHOICE BOX " + str(Global.story_manager.choiceBox))
 	print("succcc")
-	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

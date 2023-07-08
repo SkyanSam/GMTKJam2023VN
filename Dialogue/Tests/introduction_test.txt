@@ -1,6 +1,6 @@
--> story1a
+-> storyOneA
 
-=== story1a ===
+=== storyOneA ===
 
 Heraldus: “Hey, (name of player), you’re finally awake.”
 
@@ -11,7 +11,7 @@ Heraldus: “Hey, (name of player), you’re finally awake.”
         pretty fast. Can’t wait to see the Nests, huh?”
     
     "What are the nests?"
-    -> story1b
+    -> storyOneB
 
 + “Where... where is this?”
 
@@ -19,16 +19,16 @@ Heraldus: “Hey, (name of player), you’re finally awake.”
         that’s taking us soldiers all the way to the Nests.”
         
     "What are the nests?"
-    -> story1b
+    -> storyOneB
 
 + “Oh my god I’m in a freaking plane.”
     Heraldus: “Yeah? Are you feeling okay? Hit your head or something?
         Just don’t let the general find out or she’ll have you taken out of the Nest mission.”
     
     “The Nest mission?”
-    -> story1b
+    -> storyOneB
 
-=== story1b ===
+=== storyOneA ===
 Heraldus: “Yeah, you know, the Nests? Weird mutant bugs that somehow colonized
     a continent? They seem to be assembling a weapon of some sort, so
     it’s our job to wipe them all out.”
