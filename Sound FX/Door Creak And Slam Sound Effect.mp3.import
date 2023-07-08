@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Door Creak And Slam Sound Effect.mp3-7431ff2554201853e4b5d9cdf0bc7221.mp3str"
+
+[deps]
+
+source_file="res://Sound FX/Door Creak And Slam Sound Effect.mp3"
+dest_files=[ "res://.import/Door Creak And Slam Sound Effect.mp3-7431ff2554201853e4b5d9cdf0bc7221.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
