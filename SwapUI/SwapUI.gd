@@ -10,7 +10,9 @@ export var characterNames : PoolStringArray
 func _ready():
 	for currentCharacter in characterNames:
 		if Global.story_manager.story.variablesState[currentCharacter]:
-			getNode(currentCharacter)
+			get_node(currentCharacter).modulate = Color(86,86,86)
+		else:
+			get_node(currentCharacter).modulate = Color(0,0,0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
