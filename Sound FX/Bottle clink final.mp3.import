@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bottle clink final.mp3-7c9a9992191d7e837f826778f1bd1952.mp3str"
+
+[deps]
+
+source_file="res://Sound FX/Bottle clink final.mp3"
+dest_files=[ "res://.import/Bottle clink final.mp3-7c9a9992191d7e837f826778f1bd1952.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
