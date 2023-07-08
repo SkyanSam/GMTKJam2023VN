@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sitting down final.mp3-e618e4b377ed4c640524477b5c5322c6.mp3str"
+
+[deps]
+
+source_file="res://Sound FX/Sitting down final.mp3"
+dest_files=[ "res://.import/Sitting down final.mp3-e618e4b377ed4c640524477b5c5322c6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
