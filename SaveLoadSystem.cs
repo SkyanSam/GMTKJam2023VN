@@ -7,7 +7,7 @@ using System.IO;
 
 namespace GMTKJam2023VN
 {
-    class SaveSystem : Node2D
+    public class SaveSystem : Node2D
     {
         public void Save()
         {
