@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Dialogue Based Game"
+run/main_scene="res://Notebook Scene/notebook.tscn"
 config/icon="res://icon.png"
 
 [autoload]
