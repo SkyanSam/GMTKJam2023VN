@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Background din final.mp3-a9f6fb3431d3d193138fca7ac7e71a08.mp3str"
+
+[deps]
+
+source_file="res://Sound FX/Background din final.mp3"
+dest_files=[ "res://.import/Background din final.mp3-a9f6fb3431d3d193138fca7ac7e71a08.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

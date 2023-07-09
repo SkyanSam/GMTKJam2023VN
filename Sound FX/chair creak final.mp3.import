@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chair creak final.mp3-5a71eb59e36f3fa98593db1f66309245.mp3str"
+
+[deps]
+
+source_file="res://Sound FX/chair creak final.mp3"
+dest_files=[ "res://.import/chair creak final.mp3-5a71eb59e36f3fa98593db1f66309245.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
