@@ -1,4 +1,4 @@
--> BardScene
+-> EllegardScene
 
 // Implement All the variables first that are in notion
 VAR currentNPC = "Bartender"
@@ -32,6 +32,8 @@ VAR hasDarts = true
 VAR currentCharacterImage = ""
 
 VAR currentBackground = ""
+
+VAR hasSwitched = 0
 
 ===  BartenderScene ===
 
@@ -69,7 +71,7 @@ Raymond: "Get me a drink, bartender."
  ~MCLetter = "D" 
  ~MCEmotion = "Annoy"
 
-    Raymond: I want another drink...and a room for tonight.
+- Raymond: I want another drink...and a room for tonight.
 
 - Bartender: Sure thing. Who's it for?
 
@@ -78,28 +80,31 @@ Raymond: "Get me a drink, bartender."
 
 Raymond: Feller. Raymond Feller.
 
-*   Bartender: Cool.:  (Charge 10 coins).
+*   Bartender: Cool. (Charge 10 coins).
 
  ~MCLetter = "D" 
  ~MCEmotion = "Neutral"
  
- -> DONE
 
-*   Bartender: Cool.:  (Charge 20 coins).
+
+*   Bartender: Cool. (Charge 20 coins).
 
  ~MCLetter = "D" 
  ~MCEmotion = "Annoy"
  
- -> DONE
 
-*   Bartender: Cool.:  "Sorry, none available."
+
+
+*   Bartender: Sorry, none available.
 
  ~MCLetter = "D" 
  ~MCEmotion = "Annoy"
 
-(Raymond grumbles and takes a seat at an empty table in the corner by the fire.)
 
-(Press S to swap to another NPC!)
+
+- Raymond grumbles and takes a seat at an empty table in the corner by the fire
+
+Press S to swap to another NPC!**
 
 -> DONE
 ~canSwap = true
@@ -122,6 +127,7 @@ Raymond: Feller. Raymond Feller.
  ~MCEmotion = "Sad"
 
 *   Ellegard:  Drowning your sorrows?
+
     Raymond:  Yeah, sure. Something like that.
 *   Ellegard:  Need some company?
     Raymond:  Sure. Whatever.
@@ -130,71 +136,69 @@ Raymond: Feller. Raymond Feller.
 
 Raymond: (Grunts.) You first.
 
-*   Ellegard :  I've been here...just making a living doing this. Not really a fan of it...
-    That's not true Ellie, you love this work. Ever since yer father made you get a job off that farm...
-*   Ellegard :  I'm here to find a hero and...help him out a bit.
 
- ~MCLetter = "B" 
- ~MCEmotion = "Neutral"
+*   Ellegard :  I've been here...just making a living doing this. Not really a fan of it...
+  Patron: That's not true Ellie, you love this work. Ever since yer father made you get a job off that farm...
+  
+  (Your suspicion meter rises a bit.)
+
+(This is your suspicion meter. It tells you how close you are to being found out. Keep it as low as possible to keep the story going.)
+
+(If your suspicion meter gets too high, the characters will realize you're not one of them!)
 
 -
 
-(Your suspicion meter rises a bit.)
-~ susMeter += 1
-(This is your suspicion meter. It tells you how close you are to being found out. Keep it as low as possible to keep the story going.)
+*Ellegar: Right. I don't know what I was thinking. 
 
-(If your suspicion meter gets too high, the characters will realize you're not one of them!)
+-> END
 
-Raymond: Reply 2: Hmm? What did you say? // NEED TO ADD THIS TO OTHER CHOICE WRONG SSFNKSNFNSF
+*Umm, no. I don't know what you're talking about...
 
-(Your suspicion meter rises a lot.)
 
-~ susMeter += 1
 
-(This is your suspicion meter. It tells you how close you are to being found out. Keep it as low as possible to keep the story going.)
-
-(If your suspicion meter gets too high, the characters will realize you're not one of them!)
-Options 1a and 2b lead to a GAME OVER screen.
 
  ~MCLetter = "B" 
  ~MCEmotion = "Sad"
 
-Raymond: Well girl, I don't have much to tell. Only person in my life is gone.
+- Raymond: Well girl, I don't have much to tell. Only person in my life is gone.
 
 Ellegard: That's a start...
 
 Raymond: You heard of Sir Sharpe, right? I was his squire a long, long time ago. Those days are over.
 
 *   Ellegard:  How come?
+Raymond: Look, it's not a tale for ladies. Why don't you just piss off and do your job.
+Raymond: ...
+Raymond: ...sorry, girl. I don't want company.
+-> DONE
 *   Ellegard:  What happened?
 
--
+Raymond: Look, it's not a tale for ladies. Why don't you just piss off and do your job.
+Raymond: ...
+Raymond: ...sorry, girl. I don't want company.
+
 
 -> DONE
 // need to switch
 ~canUseBard = true
 ===  BardScene ===
 
+~ hasSwitched += 1
  ~MCLetter = "D" 
  ~MCEmotion = "Neutral"
 
 Raymond: Bard. What are you looking over here for?
 
-*   Red:  I'm seeing the face of someone who needs a little merriment. (sus up)
+*   Red:  I'm seeing the face of someone who needs a little merriment. 
     ~ susMeter += 1
+    
+    Barkeep: Nice to see you loosen that lead tongue of yours, Red!
 *   Red:  Just uh...glancing in your general direction.
-
--
-
-Barkeep: Reply 1: Nice to see you loosen that lead tongue of yours, Red!
-
-
-
-Raymond: Reply 2: Sure. (sus up)
+Raymond: Sure...
     ~ susMeter += 1
-
+-
 *   Red:  I listened in on what..uh, you just said to Ellie.
-*   Red:  Heard what you were talking about over there. (sus up a bit)
+*   Red:  Heard what you were talking about over there. 
     ~ susMeter += 1
     ~MCLetter = "D" 
     ~MCEmotion = "Annoy"
@@ -203,11 +207,11 @@ Raymond: Reply 2: Sure. (sus up)
 
 Raymond: What do you know of loss, bard? You traipse around in your boots and your hat... have you ever even experienced hardship?
 
-* Red:  I have. I...uh...lost someone important to me too. Th-they meant a lot to me. (sus down)
+* Red:  I have. I...uh...lost someone important to me too. Th-they meant a lot to me. 
     ~ susMeter -= 1
     ~MCLetter = "D" 
     ~MCEmotion = "Neutral"
-* Red:  No, I haven't. But I can lend an empathetic ear. (sus way up)
+* Red:  No, I haven't. But I can lend an empathetic ear. 
     ~ susMeter += 2
     ~MCLetter = "D" 
     ~MCEmotion = "Neutral"
@@ -228,15 +232,18 @@ Raymond: Get out of my face. Don't make me talk about this!
 -> DONE
 // switch
 
+
+
 ~canUseTim = true
 ===  TimScene ===
+~ hasSwitched += 1
 
-LABEL: TimScene
+// LABEL: TimScene
 
 Bartender: Oi Tim, come over here, let me get you a drink.
 
 *   Tim:  Yes, sir?
-*   Tim:  What is it you want? (sus up a little)
+*   Tim:  What is it you want? 
 ~ susMeter += 1
     
 - Bartender: That guy that walked in...Feller, he's got a horse he left here. A beige horse. See to it, would you?
@@ -244,6 +251,7 @@ Bartender: Oi Tim, come over here, let me get you a drink.
 *   Tim:  Walk outside the tavern into the stables.
 *   Tim:  Stay in the tavern.
 
+-> END
 -
 
 (Raymond's horse stands in a stall with a saddlebag attached to him.)
@@ -253,14 +261,12 @@ Bartender: Oi Tim, come over here, let me get you a drink.
     The scroll reads: Today, on the fifth in the season of harvest, the magister confirms the unfortunate passing of Sir Sharpe. He perished during a duel with Lord Corwell, in which the two agreed to fight until first blood. The opponent allegedly drew blood on the Sir's neck, leading to an unlucky demise. Sir Sharpe was a knight in His Majesty's army, and will be remembered for both his honor and his spirit.
     (A good number of the words are crossed out with black ink. There are cliffnotes reading "LIAR," "WRONG," and "TRAITOR.")
 *   Tim:  (Leave the saddlebag.)
-
+ -> END
 -
 
 -> DONE
 ~canUsePatroness = true
 ===  PatronScene ===
-
-LABEL: PatronScene
 
     ~MCLetter = "B" 
     ~MCEmotion = "Neutral"
@@ -269,8 +275,10 @@ Bartender: ...get you another after you manage to hit the damn board. Laileth, y
 
 *   Patron:  Damn drunk my arse!
     Bartender:  Okay, just... be careful. 'specially around that one over there. (He points a finger at Raymond.)
-*   Patron:  You're right. I should probably go home... (GAME OVER straightaway)
+*   Patron:  You're right. I should probably go home... 
+
     Bartender:  You've had enough. Just don't get into any scuffles. Especially with that one over there. (He ponts a finger at Raymond.)
+ -> END
 *   Patron:  I can see just fine.
     Bartender:  You've had enough. Just don't get into any scuffles. Especially with that one over there. (He ponts a finger at Raymond.)
 
@@ -281,9 +289,9 @@ Bartender: ...get you another after you manage to hit the damn board. Laileth, y
 
 Raymond: You're the third person today to ask that. What's the deal?
 
-*   Patron:  No deal. I just don't like to see unhappy customers. (sus up a little)
+*   Patron:  No deal. I just don't like to see unhappy customers. 
     ~ susMeter += 1
-*   Patron:  Look, I know what's happened to you. (sus up a lot)
+*   Patron:  Look, I know what's happened to you. 
     ~ susMeter += 2
 
 - Raymond: Word travels fast, eh?
@@ -292,13 +300,13 @@ Raymond: You're the third person today to ask that. What's the deal?
     ~MCEmotion = "Neutral"
 
 
-*   Patron:  I know. I know about Sharpe. I know about Corwell. I know how he killed him and how all anyone is doing is sweeping it under the rug. (sus way up)
+*   Patron:  I know. I know about Sharpe. I know about Corwell. I know how he killed him and how all anyone is doing is sweeping it under the rug. 
     ~ susMeter += 99
-    Raymond:  ...you aren't supposed to know this. (GAME OVER)
+    Raymond:  ...you aren't supposed to know this. 
     -> END
 *   Patron:  I mean...it's rather obvious, yes? You're sulking.
     Raymond:  I'm not sulking. I'm finding my answers in this bottle of... whatever the hell this is.
-*   Patron:  I'm a traveler too. But you're on the wrong path here. (sus a little up)
+*   Patron:  I'm a traveler too. But you're on the wrong path here. 
     Raymond:  'Wrong path.' What do you mean by 'wrong path?' There's no right one to take.
     ~ susMeter += 1
 
