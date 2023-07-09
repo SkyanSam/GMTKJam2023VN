@@ -7,5 +7,5 @@ func _ready():
 	trigger_story()
 	
 func trigger_story():
-	print("trig" + str(Global.story_manager))
-	Global.story_manager.Start(path, label)
+	#print("trig" + str(get_node("/root/Node2D/StoryManager")))
+	get_node("/root/Node2D/StoryManager").Start(path, label)

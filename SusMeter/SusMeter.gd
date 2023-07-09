@@ -13,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	status = Global.story_manager.GetVariable("susMeter")
+	status = get_node("/root/Node2D/StoryManager").GetVariable("susMeter")
 	match (status):
 		0:
 			$sus1.hide()

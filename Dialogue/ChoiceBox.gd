@@ -12,11 +12,12 @@ var index = 0;
 func _ready():
 	hide()
 	#print(self)
-	print(Global.story_manager)
-	Global.story_manager.choiceBox = self
-	print("CHOICE BOX SUCCESS!!")
-	print("CHOICE BOX " + str(Global.story_manager.choiceBox))
-	print("succcc")
+	print(get_node("/root/Node2D/StoryManager"))
+	#get_node("/root/Node2D/StoryManager").choiceBox = self
+	get_node("/root/Node2D/StoryManager").choiceBox = self
+	#print("CHOICE BOX SUCCESS!!")
+	#print("CHOICE BOX " + str(get_node("/root/Node2D/StoryManager").choiceBox))
+	#print("succcc")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -51,4 +52,4 @@ func trigger_choice(choices):
 	show()
 
 func select_choice():
-	Global.story_manager.SelectChoice()
+	get_node("/root/Node2D/StoryManager").SelectChoice()

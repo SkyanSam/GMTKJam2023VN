@@ -3,7 +3,7 @@ extends Node
 
 const StoryManager = preload("res://Dialogue/StoryManager/StoryManager.cs")
 
-onready var story_manager : StoryManager = get_node("/root/Game/StoryManager")
+onready var story_manager : StoryManager = get_node("/root/Node2D/StoryManager")
 
 onready var rng : RandomNumberGenerator = RandomNumberGenerator.new()
 
@@ -16,5 +16,6 @@ func _ready():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if (story_manager == null):
+		story_manager = get_node("/root/Node2D/StoryManager")

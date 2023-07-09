@@ -4,10 +4,10 @@
 [ext_resource path="res://fonts/KgTenThousandReasonsSize75.tres" type="DynamicFont" id=2]
 
 [node name="ChoiceButton" type="Button"]
-margin_right = 920.0
+margin_right = 1920.0
 margin_bottom = 530.0
 rect_min_size = Vector2( 920, 100 )
-size_flags_vertical = 3
 theme = ExtResource( 1 )
 custom_fonts/font = ExtResource( 2 )
 text = "Choice 1"
+clip_text = true

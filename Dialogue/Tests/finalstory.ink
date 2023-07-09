@@ -47,6 +47,7 @@ Your goal is to drive our protagonist towards their destiny.
 
  ~MCLetter = "C" 
  ~MCEmotion = "Smirk"
+ ~currentNPC = "Bartender"
 
 Raymond: "Get me a drink, bartender."
 *   Bartender:  What'cha want?
@@ -92,14 +93,12 @@ Raymond: Feller. Raymond Feller.
 
  ~MCLetter = "D" 
  ~MCEmotion = "Neutral"
- 
 
 
 *   Bartender: Cool. (Charge 20 coins).
 
  ~MCLetter = "D" 
  ~MCEmotion = "Annoy"
- 
 
 
 
@@ -109,12 +108,10 @@ Raymond: Feller. Raymond Feller.
  ~MCEmotion = "Annoy"
 
 
-
 - Raymond grumbles and takes a seat at an empty table in the corner by the fire
 
 Press S to swap to another NPC!**
 
--> DONE
 ~canSwap = true
 
 ~canUseTim = false
@@ -126,6 +123,8 @@ Press S to swap to another NPC!**
 ~canUseBard = false
 
 ~canUsePatroness = false
+
+-> DONE
 
 //After this only allow the player to swap to the barmaid
 

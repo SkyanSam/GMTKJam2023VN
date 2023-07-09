@@ -19,6 +19,7 @@ public class StoryManager : Node2D
 	bool storyActive = false;
 	public override void _Ready() 
 	{
+		//GetNode("/root/Node2D/Global").Set("story_manager", this);
 		instance = this;
 	}
 	public void Next()
@@ -57,6 +58,10 @@ public class StoryManager : Node2D
 		story = new Story(text);
 		if (label != "") story.ChoosePathString(label);
 		Next();
+	}
+	public void GotoLabel(string label)
+    {
+		story.ChoosePathString(label);
 	}
 	public object GetVariable(string s)
     {
