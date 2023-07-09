@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MCsprite_D_surprise.png-55c17c9c7a6da148f413d3fddb16da2a.stex"
+path="res://.import/MCsprite_yeah.png-4ba5f3ae3aba124cf3ed7326843f9721.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/MCsprite_D_surprise.png"
-dest_files=[ "res://.import/MCsprite_D_surprise.png-55c17c9c7a6da148f413d3fddb16da2a.stex" ]
+source_file="res://Characters/MC/MCsprite_yeah.png"
+dest_files=[ "res://.import/MCsprite_yeah.png-4ba5f3ae3aba124cf3ed7326843f9721.stex" ]
 
 [params]
 
