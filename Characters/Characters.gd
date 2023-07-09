@@ -6,14 +6,14 @@ extends Control
 # var b = "text"
 var temp = ""
 var MCLetter = "A"
-var MCEmotion = "Happy"
+var MCEmotion = "Neutral"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node(temp).hide()
 	match Global.story_manager.story.variableState[MCLetter]:
 		"A":
-			match Global.story_manager.story.variableState[MCEmotion]:
+			match Global.story_manager.story.variablesState[MCEmotion]:
 				"Happy":
 					$MCspriteAHappy.show()
 					temp = "MCspriteAHappy"
@@ -24,7 +24,7 @@ func _ready():
 					$MCspriteAOpen.show()
 					temp = "MCspriteAOpen"
 		"B":
-			match Global.story_manager.story.variableState[MCEmotion]:
+			match Global.story_manager.story.variablesState[MCEmotion]:
 				"Blush":
 					$MCspriteBBlush.show()
 					temp = "MCspriteBBlush"
@@ -34,8 +34,11 @@ func _ready():
 				"Sad":
 					$MCspriteBSad.show()
 					temp = "MCspriteBSad"
+				"Touched":
+					$MCspriteBTouched.show()
+					temp = "MCspriteBTouched"
 		"C":
-			match Global.story_manager.story.variableState[MCEmotion]:
+			match Global.story_manager.story.variablesState[MCEmotion]:
 				"Neutral":
 					$MCspriteCNeutral.show()
 					temp = "MCspriteCNeutral"
@@ -46,7 +49,7 @@ func _ready():
 					$MCspriteCSmirk.show()
 					temp = "MCspriteCSmirk"
 		"D":
-			match Global.story_manager.story.variableState[MCEmotion]:
+			match Global.story_manager.story.variablesState[MCEmotion]:
 				"Annoy":
 					$MCspriteDAnnoy.show()
 					temp = "MCspriteDAnnoy"
@@ -56,6 +59,9 @@ func _ready():
 				"Surprise":
 					$MCspriteDSurprise.show()
 					temp = "MCspriteDSurpirse"
+				"Uhh":
+					$MCspriteDUhh.show()
+					temp = "MCspriteDUhh"
 					
 
 
