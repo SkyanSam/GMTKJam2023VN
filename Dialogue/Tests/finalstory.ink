@@ -1,5 +1,8 @@
 -> BartenderScene
 
+// Implement All the variables first that are in notion
+VAR susMeter = 0
+
 ===  BartenderScene ===
 
 Raymond: "Get me a drink, bartender."
@@ -63,6 +66,8 @@ Raymond: (Grunts.) You first.
 Raymond: Reply 2: Hmm? What did you say?
 
 (Your suspicion meter rises a lot.)
+
+~ susMeter += 1
 
 (This is your suspicion meter. It tells you how close you are to being found out. Keep it as low as possible to keep the story going.)
 
