@@ -17,7 +17,7 @@ func _ready():
 		"Maid":
 			$MaidBackground.hide()
 		"Bard":
-			
+			$BardBackground.hide()
 		"Patroness":
 			
 		"GoodEnding":
@@ -35,6 +35,7 @@ func _ready():
 			$MaidBackground.show()
 			temp = "Maid"
 		"Bard":
+			$BardBackground.show()
 			temp = "Bard"
 		"Patroness":
 			temp = "Patroness"

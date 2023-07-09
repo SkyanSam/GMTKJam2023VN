@@ -35,12 +35,23 @@ VAR currentBackground = ""
 
 ===  BartenderScene ===
 
+ ~MCLetter = "C" 
+ ~MCEmotion = "Smirk"
+
 Raymond: "Get me a drink, bartender."
 *   Bartender:  What'cha want?
     Raymond:  Beer. Thanks.
 *   Bartender:  I've got a name, you know.
+
+ ~MCLetter = "C" 
+ ~MCEmotion = "Pissed"
+
     Raymond:  Don't care. Get me a beer.
 *   Bartender:  (Narrow eyes and slide over a glass of beer.)
+
+ ~MCLetter = "C" 
+ ~MCEmotion = "Neutral"
+
 - Raymond:  Thanks.
 
 (He leaves three silver coins on the table. They've been stained with mud, soot...and tears.)
@@ -48,19 +59,43 @@ Raymond: "Get me a drink, bartender."
 (The man hides his face as he takes a swig of his drink.)
 
 *   Bartender:  So, where'd you come from?
+
+ ~MCLetter = "D" 
+ ~MCEmotion = "Neutral"
+
     Raymond: Doesn't matter.
 *   Bartender:  Anything else?
+
+ ~MCLetter = "D" 
+ ~MCEmotion = "Annoy"
+
     Raymond: I want another drink...and a room for tonight.
 
 - Bartender: Sure thing. Who's it for?
 
+ ~MCLetter = "C" 
+ ~MCEmotion = "Smirk"
+
 Raymond: Feller. Raymond Feller.
 
 *   Bartender: Cool.:  (Charge 10 coins).
+
+ ~MCLetter = "D" 
+ ~MCEmotion = "Neutral"
+ 
+ -> DONE
+
 *   Bartender: Cool.:  (Charge 20 coins).
+
+ ~MCLetter = "D" 
+ ~MCEmotion = "Annoy"
+ 
+ -> DONE
+
 *   Bartender: Cool.:  "Sorry, none available."
 
-- 
+ ~MCLetter = "D" 
+ ~MCEmotion = "Annoy"
 
 (Raymond grumbles and takes a seat at an empty table in the corner by the fire.)
 
@@ -225,6 +260,7 @@ Raymond: You're the third person today to ask that. What's the deal?
     Raymond:  I'm not sulking. I'm finding my answers in this bottle of... whatever the hell this is.
 *   Patron:  I'm a traveler too. But you're on the wrong path here. (sus a little up)
     Raymond:  'Wrong path.' What do you mean by 'wrong path?' There's no right one to take.
+    ~ susMeter += 1
 
 - Patron: There's something for you to do about it.
 
@@ -239,5 +275,11 @@ Patron: So what are you going to do?
 Raymond: I want to kill that son of a swine. (He sighs). I guess that means avenging my- avenging Sir Sharpe.
 
 Patron: Then get off your arse, Feller.
+
+-> DONE
+
+=== SusMeterTooSus ===
+
+GAMEOVER
 
 -> DONE
