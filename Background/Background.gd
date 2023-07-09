@@ -1,14 +1,12 @@
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var temp = "";
+var badending = false
+var goodending = false
+var character = "";
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	match (temp):
+	match (character):
 		"Tim":
 			$TimBackground.hide()
 			$Horse.hide()
@@ -20,37 +18,36 @@ func _ready():
 		"Bard":
 			$BardBackground.hide()
 		"Patroness":
-			$PatronBackground.hide()
+			$PatronessBackground.hide()
 		"GoodEnding":
 			$GoodEnding.hide()
 		"BadEnding":
-			
+			$BadEnding.hide()
 	match (Global.story_manager.story.variablesState["currentNPC"]):
 		"Tim":
 			$TimBackground.show()
 			$Horse.show()
-			temp = "Tim"
+			character = "Tim"
 		"Barkeeper":
 			$BarkeeperBackground.show()
 			$BarkeeperDesk.show()
-			temp = "Barkeeper"
+			character = "Barkeeper"
 		"Maid":
 			$MaidBackground.show()
-			temp = "Maid"
+			character = "Maid"
 		"Bard":
 			$BardBackground.show()
-			temp = "Bard"
+			character = "Bard"
 		"Patroness":
-			$PatronBackground.show()
-			temp = "Patroness"
+			character = "Patroness"
 		"GoodEnding":
 			$GoodEnding1.show()
-			await get_tree().create_timer(7.0).timeout
+			#await get_tree().create_timer(7.0).timeout
 			$GoodEnding1.hide()
 			$GoodEnding2.show()
-			temp = "GoodEnding"
-		"BadEnding"
-			temp = "BadEnding"
+			character = "GoodEnding"
+		"BadEnding":
+			character = "BadEnding"
 			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
