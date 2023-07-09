@@ -1,5 +1,8 @@
 extends Control
 
+# PLEASE FOR THE LOVE OF FUCKING GOD GET THE TEXTURE BEFORE YOU GO INTO SAVE SYSTEM MENU
+# THAT WAY YOU DONT TAKE SCREENSHOT OF SAVE SYSTEM MENU
+
 onready var SaveLoadSystem = load("res://SaveLoadGame/SaveLoadSystem.cs")
 var currentSave = 0
 
