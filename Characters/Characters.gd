@@ -6,7 +6,7 @@ extends Control
 # var b = "text"
 var temp = ""
 var MCLetter = "A"
-var MCEmotion = "Happy"
+var MCEmotion = "Neutral"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,6 +34,9 @@ func _ready():
 				"Sad":
 					$MCspriteBSad.show()
 					temp = "MCspriteBSad"
+				"Touched":
+					$MCspriteBTouched.show()
+					temp = "MCspriteBTouched"
 		"C":
 			match Global.story_manager.story.variableState[MCEmotion]:
 				"Neutral":
@@ -56,6 +59,9 @@ func _ready():
 				"Surprise":
 					$MCspriteDSurprise.show()
 					temp = "MCspriteDSurpirse"
+				"Uhh":
+					$MCspriteDUhh.show()
+					temp = "MCspriteDUhh"
 					
 
 
