@@ -18,5 +18,3 @@ texture = ExtResource( 4 )
 
 [node name="MaidBackground" type="Sprite" parent="."]
 texture = ExtResource( 3 )
-
-[node name="DummyScene" type="Sprite" parent="."]
