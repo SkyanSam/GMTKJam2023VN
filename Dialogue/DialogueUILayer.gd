@@ -8,7 +8,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.story_manager.dialogueUILayer = self
+	#get_node("/root/Node2D/StoryManager").dialogueUILayer = self
+	get_node("/root/Node2D/StoryManager").dialogueUILayer = self
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

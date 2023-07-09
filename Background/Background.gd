@@ -5,7 +5,7 @@ var goodending = false
 var character = "";
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _process(delta):
 	match (character):
 		"Tim":
 			$TimBackground.hide()
@@ -23,7 +23,7 @@ func _ready():
 			$GoodEnding.hide()
 		"BadEnding":
 			$BadEnding.hide()
-	match (Global.story_manager.story.variablesState["currentNPC"]):
+	match (get_node("/root/Node2D/StoryManager").GetVariable("currentNPC")):
 		"Tim":
 			$TimBackground.show()
 			$Horse.show()

@@ -79,29 +79,25 @@ Raymond: "Get me a drink, bartender."
 Raymond: Feller. Raymond Feller.
 
 *   Bartender: Cool.:  (Charge 10 coins).
-
- ~MCLetter = "D" 
- ~MCEmotion = "Neutral"
- 
- -> DONE
+    
+~MCLetter = "D" 
+~MCEmotion = "Neutral"
 
 *   Bartender: Cool.:  (Charge 20 coins).
 
- ~MCLetter = "D" 
- ~MCEmotion = "Annoy"
- 
- -> DONE
+~MCLetter = "D" 
+~MCEmotion = "Annoy"
 
 *   Bartender: Cool.:  "Sorry, none available."
 
  ~MCLetter = "D" 
  ~MCEmotion = "Annoy"
 
-(Raymond grumbles and takes a seat at an empty table in the corner by the fire.)
+- Raymond grumbles and takes a seat at an empty table in the corner by the fire.
 
-(Press S to swap to another NPC!)
+Press S to swap to another NPC!
 
--> DONE
+
 ~canSwap = true
 
 ~canUseTim = false
@@ -113,6 +109,8 @@ Raymond: Feller. Raymond Feller.
 ~canUseBard = false
 
 ~canUsePatroness = false
+
+-> DONE
 
 //After this only allow the player to swap to the barmaid
 

@@ -4,16 +4,16 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var temp = ""
+var temp = "MCspriteAHappy"
 var MCLetter = "A"
 var MCEmotion = "Neutral"
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _process(delta):
 	get_node(temp).hide()
-	match Global.story_manager.story.variableState[MCLetter]:
+	match get_node("/root/Node2D/StoryManager").GetVariable("MCLetter"):
 		"A":
-			match Global.story_manager.story.variablesState[MCEmotion]:
+			match get_node("/root/Node2D/StoryManager").GetVariable("MCEmotion"):
 				"Happy":
 					$MCspriteAHappy.show()
 					temp = "MCspriteAHappy"
@@ -24,7 +24,7 @@ func _ready():
 					$MCspriteAOpen.show()
 					temp = "MCspriteAOpen"
 		"B":
-			match Global.story_manager.story.variablesState[MCEmotion]:
+			match get_node("/root/Node2D/StoryManager").GetVariable("MCEmotion"):
 				"Blush":
 					$MCspriteBBlush.show()
 					temp = "MCspriteBBlush"
@@ -38,7 +38,7 @@ func _ready():
 					$MCspriteBTouched.show()
 					temp = "MCspriteBTouched"
 		"C":
-			match Global.story_manager.story.variablesState[MCEmotion]:
+			match get_node("/root/Node2D/StoryManager").GetVariable("MCEmotion"):
 				"Neutral":
 					$MCspriteCNeutral.show()
 					temp = "MCspriteCNeutral"
@@ -49,7 +49,7 @@ func _ready():
 					$MCspriteCSmirk.show()
 					temp = "MCspriteCSmirk"
 		"D":
-			match Global.story_manager.story.variablesState[MCEmotion]:
+			match get_node("/root/Node2D/StoryManager").GetVariable("MCEmotion"):
 				"Annoy":
 					$MCspriteDAnnoy.show()
 					temp = "MCspriteDAnnoy"

@@ -19,6 +19,7 @@ public class StoryManager : Node2D
 	bool storyActive = false;
 	public override void _Ready() 
 	{
+		//GetNode("/root/Node2D/Global").Set("story_manager", this);
 		instance = this;
 	}
 	public void Next()

@@ -12,10 +12,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#print(Global.story_manager.story)
-	#if Global.story_manager.story.variablesState["canUseBarkeeper"] == true:
-	print(Global.story_manager.GetVariable("canUseBarkeeper"))
-	if Global.story_manager.GetVariable("canUseBarkeeper") == true:
+	#print(get_node("/root/Node2D/StoryManager").story)
+	#if get_node("/root/Node2D/StoryManager").story.variablesState["canUseBarkeeper"] == true:
+	print(get_node("/root/Node2D/StoryManager").GetVariable("canUseBarkeeper"))
+	if get_node("/root/Node2D/StoryManager").GetVariable("canUseBarkeeper") == true:
 		show()
 	else: 
 		hide()

@@ -7,8 +7,8 @@ var current_text = ""
 var current_char_index = 0
 
 func _ready():
-	Global.story_manager.dialogueBox = self
-	print("dialouge box " + str(Global.story_manager.dialogueBox))
+	get_node("/root/Node2D/StoryManager").dialogueBox = self
+	#print("dialouge box " + str(get_node("/root/Node2D/StoryManager").dialogueBox))
 
 func trigger_dialogue(text : String):
 	show()

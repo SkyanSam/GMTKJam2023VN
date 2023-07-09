@@ -13,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Global.story_manager.GetVariable("canUseBard") == true:
+	if get_node("/root/Node2D/StoryManager").GetVariable("canUseBard") == true:
 		show()
 	else: 
 		hide()
