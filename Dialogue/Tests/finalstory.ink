@@ -1,7 +1,37 @@
--> BartenderScene
+-> BardScene
 
 // Implement All the variables first that are in notion
+VAR currentNPC = "Bartender"
+
+VAR canSwap = false
+
+VAR canUseTim = false
+
+VAR canUseBarkeeper = false
+
+VAR canUseMaid = false
+
+VAR canUseBard = false
+
+VAR canUsePatroness = false
+
+VAR MCLetter = "A"
+
+VAR MCEmotion = "Neutral"
+
 VAR susMeter = 0
+
+VAR canUseInventory = false
+
+VAR hasAlchoholDrink = true
+
+VAR hasHorseBagScroll = true
+
+VAR hasDarts = true
+
+VAR currentCharacterImage = ""
+
+VAR currentBackground = ""
 
 ===  BartenderScene ===
 
@@ -37,6 +67,17 @@ Raymond: Feller. Raymond Feller.
 (Press S to swap to another NPC!)
 
 -> DONE
+~canSwap = true
+
+~canUseTim = false
+
+~canUseBarkeeper = false
+
+~canUseMaid = true
+
+~canUseBard = false
+
+~canUsePatroness = false
 
 //After this only allow the player to swap to the barmaid
 
@@ -58,7 +99,7 @@ Raymond: (Grunts.) You first.
 -
 
 (Your suspicion meter rises a bit.)
-
+~ susMeter += 1
 (This is your suspicion meter. It tells you how close you are to being found out. Keep it as low as possible to keep the story going.)
 
 (If your suspicion meter gets too high, the characters will realize you're not one of them!)
@@ -87,12 +128,13 @@ Raymond: You heard of Sir Sharpe, right? I was his squire a long, long time ago.
 
 -> DONE
 // need to switch
-
+~canUseBard = true
 ===  BardScene ===
 
 Raymond: Bard. What are you looking over here for?
 
 *   Red:  I'm seeing the face of someone who needs a little merriment. (sus up)
+    ~ susMeter += 1
 *   Red:  Just uh...glancing in your general direction.
 
 -
@@ -124,6 +166,7 @@ Raymond: Get out of my face. Don't make me talk about this!
 -> DONE
 // switch
 
+~canUseTim = true
 ===  TimScene ===
 
 LABEL: TimScene
@@ -151,7 +194,7 @@ Bartender: Oi Tim, come over here, let me get you a drink.
 -
 
 -> DONE
-
+~canUsePatroness = true
 ===  PatronScene ===
 
 LABEL: PatronScene
@@ -171,6 +214,7 @@ Raymond: You're the third person today to ask that. What's the deal?
 
 *   Patron:  No deal. I just don't like to see unhappy customers. (sus up a little)
 *   Patron:  Look, I know what's happened to you. (sus up a lot)
+    ~ susMeter += 2
 
 - Raymond: Word travels fast, eh?
 
