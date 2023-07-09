@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Notebook Scene/Input.gd" type="Script" id=1]
 [ext_resource path="res://Notebook Scene/notebook_thing_back_pt2.png" type="Texture" id=2]
@@ -26,6 +26,8 @@ func _ready() -> void:
 "
 
 [sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
@@ -87,9 +89,12 @@ margin_bottom = 560.0
 size_flags_vertical = 3
 
 [node name="Input" type="TextEdit" parent="Background/MarginContainer/Rows/Page/Input Area"]
+modulate = Color( 0.65098, 0.141176, 0.141176, 1 )
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 353.0
 margin_bottom = 553.0
+custom_styles/focus = SubResource( 7 )
 custom_styles/normal = SubResource( 3 )
+wrap_enabled = true
 script = ExtResource( 1 )

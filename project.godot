@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Dialogue Based Game"
+config/name="GMTKJam2023VN"
 run/main_scene="res://Notebook Scene/notebook.tscn"
 config/icon="res://icon.png"
 
@@ -22,11 +22,17 @@ Global="*res://Global.gd"
 
 window/size/width=1920
 window/size/height=1080
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[mono]
+
+project/assembly_name="GMTKJam2023VN"
 
 [physics]
 
 common/enable_pause_aware_picking=true
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
