@@ -13,10 +13,10 @@
 [ext_resource path="res://Characters/Character Profile Pics/patroness.png" type="Texture" id=11]
 
 [node name="SaveUI" type="Control"]
-margin_left = 64.0
-margin_top = 64.0
-margin_right = 104.0
-margin_bottom = 104.0
+margin_left = 27.0
+margin_top = 156.0
+margin_right = 67.0
+margin_bottom = 196.0
 script = ExtResource( 2 )
 
 [node name="Tim" type="TextureRect" parent="."]
