@@ -262,6 +262,9 @@ Bartender: Oi Tim, come over here, let me get you a drink.
 
 LABEL: PatronScene
 
+    ~MCLetter = "B" 
+    ~MCEmotion = "Neutral"
+
 Bartender: ...get you another after you manage to hit the damn board. Laileth, you're too damn drunk to see straight.
 
 *   Patron:  Damn drunk my arse!
@@ -273,6 +276,9 @@ Bartender: ...get you another after you manage to hit the damn board. Laileth, y
 
 - Patron: Hey. Mind if I sit?
 
+    ~MCLetter = "D" 
+    ~MCEmotion = "Annoy"
+
 Raymond: You're the third person today to ask that. What's the deal?
 
 *   Patron:  No deal. I just don't like to see unhappy customers. (sus up a little)
@@ -281,6 +287,10 @@ Raymond: You're the third person today to ask that. What's the deal?
     ~ susMeter += 2
 
 - Raymond: Word travels fast, eh?
+
+    ~MCLetter = "D" 
+    ~MCEmotion = "Neutral"
+
 
 *   Patron:  I know. I know about Sharpe. I know about Corwell. I know how he killed him and how all anyone is doing is sweeping it under the rug. (sus way up)
     ~ susMeter += 99
@@ -298,6 +308,9 @@ Patron: You owe this man, Sir Sharpe, for how he took you under his wing.
 
 Patron: You were there when he was killed.
 
+    ~MCLetter = "C" 
+    ~MCEmotion = "Pissed"
+
 Patron: They ruled it an accident. Lord Corwell used his influence to get out of it.
 
 Patron: So what are you going to do?
@@ -305,6 +318,9 @@ Patron: So what are you going to do?
 Raymond: I want to kill that son of a swine. (He sighs). I guess that means avenging my- avenging Sir Sharpe.
 
 Patron: Then get off your arse, Feller.
+
+    ~MCLetter = "C" 
+    ~MCEmotion = "Smirk"
 
 -> DONE
 
