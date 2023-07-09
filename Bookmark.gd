@@ -1,10 +1,10 @@
 extends TextureRect
 
 
-bool isOpen = false
+var isOpen = false
 
 func _ready():
-	
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,7 +19,7 @@ func _on_CloseButton_pressed():
 	if isOpen == true:
 		isOpen = false
 		var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
-		tween.tween_property(get_parent(), "modulate", Color.RED, 1)
+		tween.tween_property(get_parent(), "rect_position", Vector2(0, rect_position.y), 1)
 		
 
 func _on_SaveButton_pressed():
