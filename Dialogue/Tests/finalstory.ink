@@ -186,16 +186,20 @@ Raymond: Bard. What are you looking over here for?
 Barkeep: Reply 1: Nice to see you loosen that lead tongue of yours, Red!
 
 Raymond: Reply 2: Sure. (sus up)
+    ~ susMeter += 1
 
 *   Red:  I listened in on what..uh, you just said to Ellie.
 *   Red:  Heard what you were talking about over there. (sus up a bit)
+    ~ susMeter += 1
 
 - Red: Loss can be hard to deal with.
 
 Raymond: What do you know of loss, bard? You traipse around in your boots and your hat... have you ever even experienced hardship?
 
 * Red:  I have. I...uh...lost someone important to me too. Th-they meant a lot to me. (sus down)
+    ~ susMeter -= 1
 * Red:  No, I haven't. But I can lend an empathetic ear. (sus way up)
+    ~ susMeter += 2
 
 - Raymond: Sure, bard. (He takes a large swig of his drink.) I watched him die, you know? It's hard when you watch them die...
 
@@ -291,4 +295,4 @@ Patron: Then get off your arse, Feller.
 
 GAMEOVER
 
--> DONEc
+-> DONE
