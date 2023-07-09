@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-description = ""
+description = "A beautiful jade necklace in the shape of the spirits of Comedy and Tragedy."
 hp_change = 0
 mana_change = 0
