@@ -1,20 +1,35 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Background/Background.gd" type="Script" id=1]
 [ext_resource path="res://Background/background_GMTK_game_jam_2023.png" type="Texture" id=2]
 [ext_resource path="res://Background/background_GMTK_game_jam_2023_2.png" type="Texture" id=3]
 [ext_resource path="res://Background/background_GMTK_game_jam_2023_1.png" type="Texture" id=4]
+[ext_resource path="res://Background/IMG_1527.png" type="Texture" id=5]
+[ext_resource path="res://Background/IMG_1533.png" type="Texture" id=6]
+[ext_resource path="res://Background/IMG_1542.png" type="Texture" id=7]
 
 [node name="Control" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
 
+[node name="TimBackground" type="Sprite" parent="."]
+texture = ExtResource( 7 )
+
 [node name="BarkeeperBackground" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 2 )
 
 [node name="BarkeeperDesk" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 4 )
 
 [node name="MaidBackground" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 3 )
+
+[node name="GoodEnding2" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+
+[node name="GoodEnding1" type="Sprite" parent="."]
+texture = ExtResource( 6 )

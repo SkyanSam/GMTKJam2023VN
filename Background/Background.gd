@@ -10,7 +10,7 @@ var temp = "";
 func _ready():
 	match (temp):
 		"Tim":
-			
+			$TimBackground.hide()
 		"Barkeeper":
 			$BarkeeperBackground.hide()
 			$BarkeeperDesk.hide()
@@ -19,6 +19,10 @@ func _ready():
 		"Bard":
 			
 		"Patroness":
+			
+		"GoodEnding":
+			$GoodEnding.hide()
+		"BadEnding":
 			
 	match (Global.story_manager.story.variableState["currentNPC"]):
 		"Tim":
@@ -34,6 +38,14 @@ func _ready():
 			temp = "Bard"
 		"Patroness":
 			temp = "Patroness"
+		"GoodEnding":
+			$GoodEnding1.show()
+			await get_tree().create_timer(7.0).timeout
+			$GoodEnding1.hide()
+			$GoodEnding2.show()
+			temp = "GoodEnding"
+		"BadEnding"
+			temp = "BadEnding"
 			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
