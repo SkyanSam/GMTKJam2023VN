@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Background/Background.gd" type="Script" id=1]
+[ext_resource path="res://Background/background_GMTK_game_jam_2023.png" type="Texture" id=2]
+[ext_resource path="res://Background/background_GMTK_game_jam_2023_2.png" type="Texture" id=3]
+[ext_resource path="res://Background/background_GMTK_game_jam_2023_1.png" type="Texture" id=4]
+
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="BarkeeperBackground" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="BarkeeperDesk" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+
+[node name="MaidBackground" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="DummyScene" type="Sprite" parent="."]

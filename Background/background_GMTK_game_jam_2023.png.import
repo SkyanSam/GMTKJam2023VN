@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MCsprite_D_uhh.png-1f419cf73836d239950a7fc9b0098527.stex"
+path="res://.import/background_GMTK_game_jam_2023.png-f47af4fbd517abd1b8b7408f5899f89a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/MCsprite_D_uhh.png"
-dest_files=[ "res://.import/MCsprite_D_uhh.png-1f419cf73836d239950a7fc9b0098527.stex" ]
+source_file="res://Background/background_GMTK_game_jam_2023.png"
+dest_files=[ "res://.import/background_GMTK_game_jam_2023.png-f47af4fbd517abd1b8b7408f5899f89a.stex" ]
 
 [params]
 

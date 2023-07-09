@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MCsprite_B_blush.png-aa0e8dca4a2463ab0ea61f4eb84e7077.stex"
+path="res://.import/background_GMTK_game_jam_2023_1.png-bc7b38dce9ca533e2d9266904b022175.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/MCsprite_B_blush.png"
-dest_files=[ "res://.import/MCsprite_B_blush.png-aa0e8dca4a2463ab0ea61f4eb84e7077.stex" ]
+source_file="res://Background/background_GMTK_game_jam_2023_1.png"
+dest_files=[ "res://.import/background_GMTK_game_jam_2023_1.png-bc7b38dce9ca533e2d9266904b022175.stex" ]
 
 [params]
 
