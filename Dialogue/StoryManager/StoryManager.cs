@@ -21,6 +21,13 @@ public class StoryManager : Node2D
 	{
 		//GetNode("/root/Node2D/Global").Set("story_manager", this);
 		instance = this;
+		if (story != null)
+        {
+			if ((int)GetVariable("susMeter") >= 3)
+            {
+				GotoLabel("SusMeterTooSus");
+            }
+        }
 	}
 	public void Next()
 	{
@@ -35,7 +42,15 @@ public class StoryManager : Node2D
 		}
 		else
 		{
-			ExitStory();
+			if ((bool)GetVariable("canSwap") == false)
+			{
+				ExitStory();
+				GD.Print("EXITED STORY!");
+			}
+			else
+            {
+				GD.Print("Cannot Exit Story, must select");
+            }
 		}
 	}
 	public void ExitStory()
@@ -62,6 +77,8 @@ public class StoryManager : Node2D
 	public void GotoLabel(string label)
     {
 		story.ChoosePathString(label);
+		SetVariable("canSwap", false);
+		Next();
 	}
 	public object GetVariable(string s)
     {

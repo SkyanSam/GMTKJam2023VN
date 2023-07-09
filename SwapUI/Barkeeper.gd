@@ -1,8 +1,9 @@
 extends TextureButton
 
 
-func _ready() -> void:
+func _process(delta: float) -> void:
 	if Global.story_manager.GetVariable("canUseBarkeeper") == true:
-		$Barkeeper.show()
+		show()
 	else: 
-		$Barkeeper.hide()
+		hide()
+

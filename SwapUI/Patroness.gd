@@ -8,11 +8,11 @@ extends TextureButton
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _process(delta: float) -> void:
 	if Global.story_manager.GetVariable("canUsePatroness") == true:
-		$Bard.show()
+		show()
 	else: 
-		$Bard.hide()
+		hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

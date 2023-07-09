@@ -17,5 +17,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if (story_manager == null):
-		story_manager = get_node("/root/Node2D/StoryManager")
+	story_manager = get_node("/root/Node2D/StoryManager")

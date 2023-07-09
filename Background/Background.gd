@@ -10,7 +10,7 @@ func _process(delta):
 		"Tim":
 			$TimBackground.hide()
 			$Horse.hide()
-		"Barkeeper":
+		"Bartender":
 			$BarkeeperBackground.hide()
 			$BarkeeperDesk.hide()
 		"Maid":
@@ -28,10 +28,10 @@ func _process(delta):
 			$TimBackground.show()
 			$Horse.show()
 			character = "Tim"
-		"Barkeeper":
+		"Bartender":
 			$BarkeeperBackground.show()
 			$BarkeeperDesk.show()
-			character = "Barkeeper"
+			character = "Bartender"
 		"Maid":
 			$MaidBackground.show()
 			character = "Maid"

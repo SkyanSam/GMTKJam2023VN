@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tavern_1.mp3-22a8af03ec38007c35b70c17fee3c982.mp3str"
+
+[deps]
+
+source_file="res://Music/Tavern_1.mp3"
+dest_files=[ "res://.import/Tavern_1.mp3-22a8af03ec38007c35b70c17fee3c982.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
