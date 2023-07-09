@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 public class Inventory : Control
 {
+	// MAKE IT SO SIZE OF INVENTORYIMAGE IS scale = inventoryImage / targetSize
+
 	private static List<Resource> inventoryItems = new List<Resource>();
 	private Godot.ColorRect[,] itemBGNodes = new Godot.ColorRect[3,3];
 	private Godot.TextureRect[] itemImages = new Godot.TextureRect[9];
