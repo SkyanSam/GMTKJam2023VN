@@ -1,6 +1,6 @@
 using Godot;
 using System;
-
+using System.Collections.Generic;
 public class SoundManager : Node2D
 {
 	// Declare member variables here. Examples:

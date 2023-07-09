@@ -5,7 +5,7 @@
 [ext_resource path="res://Dialogue/Triggers/DialogueTrigger.gd" type="Script" id=3]
 [ext_resource path="res://UIAssets/ui.png" type="Texture" id=4]
 
-[node name="Game" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
 [node name="BaseUI" type="TextureRect" parent="."]
 margin_right = 1920.0
@@ -16,6 +16,8 @@ texture = ExtResource( 4 )
 [node name="StoryManager" parent="." instance=ExtResource( 2 )]
 
 [node name="DialogueUILayer" parent="." instance=ExtResource( 1 )]
+margin_top = 1.0
+margin_bottom = 41.0
 
 [node name="DialogueTrigger" type="Node2D" parent="."]
 script = ExtResource( 3 )
