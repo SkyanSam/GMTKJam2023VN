@@ -24,7 +24,7 @@ func _ready():
 			$GoodEnding.hide()
 		"BadEnding":
 			
-	match (Global.story_manager.story.variableState["currentNPC"]):
+	match (Global.story_manager.story.variablesState["currentNPC"]):
 		"Tim":
 			temp = "Tim"
 		"Barkeeper":
