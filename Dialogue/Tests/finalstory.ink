@@ -37,6 +37,7 @@ VAR currentBackground = ""
 
  ~MCLetter = "C" 
  ~MCEmotion = "Smirk"
+ ~currentNPC = "Bartender"
 
 Raymond: "Get me a drink, bartender."
 *   Bartender:  What'cha want?
