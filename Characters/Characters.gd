@@ -11,7 +11,7 @@ var MCEmotion = "Neutral"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node(temp).hide()
-	match Global.story_manager.story.variablesState[MCLetter]:
+	match Global.story_manager.story.variableState[MCLetter]:
 		"A":
 			match Global.story_manager.story.variablesState[MCEmotion]:
 				"Happy":
