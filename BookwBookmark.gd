@@ -22,7 +22,7 @@ func _process(delta):
 		position = position.move_toward(Vector2(0,1000000), delta * speed)
 		
 	if(isCredit):
-		position = position.move_toward(Vector2(1000000,0), delta * speed)
+		position = position.move_toward(Vector2(600,0), delta * speed)
 
 
 func _on_StartButton_pressed():
