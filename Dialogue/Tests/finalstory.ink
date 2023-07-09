@@ -145,7 +145,7 @@ Raymond: (Grunts.) You first.
 
 (If your suspicion meter gets too high, the characters will realize you're not one of them!)
 
-Raymond: Reply 2: Hmm? What did you say?
+Raymond: Reply 2: Hmm? What did you say? // NEED TO ADD THIS TO OTHER CHOICE WRONG SSFNKSNFNSF
 
 (Your suspicion meter rises a lot.)
 
