@@ -4,8 +4,8 @@ using System.Collections.Generic;
 public class Inventory : Control
 {
 	private static List<Resource> inventoryItems = new List<Resource>();
-	private Godot.Sprite[,] itemBGNodes = new Godot.Sprite[6,3];
-	private Godot.TextureRect[] itemImages = new Godot.TextureRect[13];
+	private Godot.Sprite[,] itemBGNodes = new Godot.Sprite[3,3];
+	private Godot.TextureRect[] itemImages = new Godot.TextureRect[9];
 	private Godot.Label itemDescription;
 	int nodePointerX = 3;
 	int nodePointerY = 0;
