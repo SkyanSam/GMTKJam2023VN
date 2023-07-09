@@ -4,29 +4,41 @@ using System.Collections.Generic;
 public class Inventory : Control
 {
 	private static List<Resource> inventoryItems = new List<Resource>();
-	private Godot.Sprite[,] itemBGNodes = new Godot.Sprite[3,3];
+	private Godot.ColorRect[,] itemBGNodes = new Godot.ColorRect[3,3];
 	private Godot.TextureRect[] itemImages = new Godot.TextureRect[9];
 	private Godot.Label itemDescription;
-	int nodePointerX = 3;
+	int nodePointerX = 0;
 	int nodePointerY = 0;
+
+	private Resource inventoryItemChainBracelet;
+	private Resource inventoryItemGloves;
+	private Resource inventoryItemGoldCoin;
+	private Resource inventoryItemJadeNecklace;
+	private Resource inventoryItemQuill;
+	private Resource inventoryItemRemnant;
+	private Resource inventoryItemGhostlyGalleon;
+	private Resource inventoryItemHorseBagScroll;
+	private Resource inventoryItemAlchoholDrink;
+	private Resource inventoryItemDarts;
+
 	public override void _Ready()
 	{
-		inventoryItems.Add(ResourceLoader.Load("InventoryItems/Sword.tres"));
-		itemDescription = (Label)GetNode("Description");
+
+		inventoryItemChainBracelet = ResourceLoader.Load("InventoryItems/ChainBracelet.tres");
+		inventoryItemGloves = ResourceLoader.Load("InventoryItems/Gloves.tres");
+		inventoryItemGoldCoin = ResourceLoader.Load("InventoryItems/ChainBracelet.tres");
+		inventoryItemJadeNecklace = ResourceLoader.Load("InventoryItems/JadeNecklace.tres");
+		inventoryItemRemnant = ResourceLoader.Load("InventoryItems/Remnant.tres");
+		inventoryItemGhostlyGalleon = ResourceLoader.Load("InventoryItems/GhostlyGalleon.tres");
+		inventoryItemHorseBagScroll = ResourceLoader.Load("InventoryItems/HorseBagScroll.tres");
+		inventoryItemAlchoholDrink = ResourceLoader.Load("InventoryItems/AlchoholDrink.tres");
+		inventoryItemDarts = ResourceLoader.Load("InventoryItems/Darts.tres");
 		
-		for (int i = 0; i < 3; i++) itemBGNodes[i,0] = null;
-		int thisX = 3, thisY = 0;
-		for (int i = 0; i < 15; i++) {
-			if (thisX >= 6)
-			{
-				thisX = 0;
-				thisY += 1;
-			}
-			itemBGNodes[thisX,thisY] = (Sprite)GetNode(new NodePath($"ItemBG{i}"));
-			thisX += 1;
-		}
-		for (int i = 0; i < itemImages.Length; i++)
-		{
+		itemDescription = (Label)GetNode("Description");
+
+		for (int i = 0; i < 9; i++) {
+			var coord = GetCoord(i);
+			itemBGNodes[(int)coord.x,(int)coord.y] = (ColorRect)GetNode(new NodePath($"ItemBG{i}"));
 			itemImages[i] = (TextureRect)GetNode(new NodePath($"ItemImg{i}"));
 		}
 		Select(nodePointerX,nodePointerY);
@@ -41,11 +53,13 @@ public class Inventory : Control
 
 		if (Input.IsActionJustPressed("ui_accept")) OnPressed();
 		else if (Input.IsActionJustPressed("ui_cancel")) OnCancel();
+
+		UpdateItemsFromStory();
 	}
 	void MovePointer(int dirX, int dirY)
 	{
 		GD.Print($"move pointer: {dirX},{dirY}");
-		if (0 <= nodePointerX + dirX && nodePointerX + dirX < 6 && 0 <= nodePointerY + dirY && nodePointerY + dirY < 3)
+		if (0 <= nodePointerX + dirX && nodePointerX + dirX < 3 && 0 <= nodePointerY + dirY && nodePointerY + dirY < 3)
 		{
 			if (itemBGNodes[nodePointerX + dirX, nodePointerY + dirY] != null) 
 			{
@@ -56,13 +70,39 @@ public class Inventory : Control
 			}
 		}
 	}
+	public void DoCheck(string variable, Resource resource)
+	{
+		if ((bool)StoryManager.instance.story.variablesState[variable] == true && !inventoryItems.Contains(resource))
+		{
+			inventoryItems.Add(resource);
+		}
+		else if ((bool)StoryManager.instance.story.variablesState[variable] == false && inventoryItems.Contains(resource))
+        {
+			inventoryItems.Remove(resource);
+        }
+	}
+	public void UpdateItemsFromStory()
+    {
+		DoCheck("hasHorseBagScroll", inventoryItemHorseBagScroll);
+		DoCheck("hasAlchoholDrink", inventoryItemAlchoholDrink);
+		DoCheck("hasDarts", inventoryItemDarts);
+	}
 	void Unselect(int x, int y)
 	{
-		itemBGNodes[nodePointerX, nodePointerY].SelfModulate = new Color(1,1,1);
+		itemBGNodes[nodePointerX, nodePointerY].Visible = false;
+		//itemBGNodes[nodePointerX, nodePointerY].SelfModulate = new Color(1,1,1);
 	}
+	int GetID(int x, int y)
+    {
+		return x + (y * 3);
+    }
+	Vector2 GetCoord(int i)
+    {
+		return new Vector2(i % 3, i / 3);
+    }
 	void Select(int x, int y)
 	{
-		itemBGNodes[nodePointerX, nodePointerY].SelfModulate = new Color(0,0,0);
+		itemBGNodes[nodePointerX, nodePointerY].Visible = true;
 		int itemID = (nodePointerX - 3) + (nodePointerY * 6);
 		if (itemID < inventoryItems.Count)
 			itemDescription.Text = (String)inventoryItems[itemID].Get("description");
