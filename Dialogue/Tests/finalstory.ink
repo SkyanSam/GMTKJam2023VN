@@ -35,6 +35,14 @@ VAR currentBackground = ""
 
 VAR hasSwitched = 0
 
+=== Exposition ===
+
+This is a game, but you're not the one playing it.
+This story is wrong. Set it right.
+Your goal is to drive our protagonist towards their destiny.
+
+ -> BartenderScene
+
 ===  BartenderScene ===
 
  ~MCLetter = "C" 
@@ -139,20 +147,36 @@ Raymond: (Grunts.) You first.
 
 *   Ellegard :  I've been here...just making a living doing this. Not really a fan of it...
   Patron: That's not true Ellie, you love this work. Ever since yer father made you get a job off that farm...
-  
   (Your suspicion meter rises a bit.)
 
 (This is your suspicion meter. It tells you how close you are to being found out. Keep it as low as possible to keep the story going.)
 
 (If your suspicion meter gets too high, the characters will realize you're not one of them!)
+~MCLetter = "B" 
+ ~MCEmotion = "Neutral"
+ ~ susMeter += 1
+  
+*   Ellegard :  I'm here to find a hero and...help him out a bit.
+
+
+  Raymond: Hmm? What did you say? 
+  
+  (Your suspicion meter rises a lot.)
+
+(This is your suspicion meter. It tells you how close you are to being found out. Keep it as low as possible to keep the story going.)
+
+(If your suspicion meter gets too high, the characters will realize you're not one of them!)
+~MCLetter = "B" 
+ ~MCEmotion = "Pissed"
+ ~ susMeter += 2
 
 -
 
-*Ellegar: Right. I don't know what I was thinking. 
+*Ellegar: Umm, I don't know what I was thinking. 
 
 -> END
 
-*Umm, no. I don't know what you're talking about...
+*Ellegar: Oh sorry, I just really want to meet a real adventurer...
 
 
 
