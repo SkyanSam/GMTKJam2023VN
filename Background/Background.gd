@@ -9,6 +9,7 @@ func _ready():
 	match (character):
 		"Tim":
 			$TimBackground.hide()
+			$Horse.hide()
 		"Barkeeper":
 			$BarkeeperBackground.hide()
 			$BarkeeperDesk.hide()
@@ -24,6 +25,8 @@ func _ready():
 			$BadEnding.hide()
 	match (Global.story_manager.story.variablesState["currentNPC"]):
 		"Tim":
+			$TimBackground.show()
+			$Horse.show()
 			character = "Tim"
 		"Barkeeper":
 			$BarkeeperBackground.show()
@@ -39,11 +42,11 @@ func _ready():
 			character = "Patroness"
 		"GoodEnding":
 			$GoodEnding1.show()
-			await get_tree().create_timer(7.0).timeout
+			#await get_tree().create_timer(7.0).timeout
 			$GoodEnding1.hide()
 			$GoodEnding2.show()
 			character = "GoodEnding"
-		"BadEnding"
+		"BadEnding":
 			character = "BadEnding"
 			
 
