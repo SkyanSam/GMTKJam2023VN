@@ -59,6 +59,10 @@ public class StoryManager : Node2D
 		if (label != "") story.ChoosePathString(label);
 		Next();
 	}
+	public void GotoLabel(string label)
+    {
+		story.ChoosePathString(label);
+	}
 	public object GetVariable(string s)
     {
 		return story.variablesState[s];
