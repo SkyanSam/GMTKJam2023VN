@@ -175,6 +175,9 @@ Raymond: You heard of Sir Sharpe, right? I was his squire a long, long time ago.
 ~canUseBard = true
 ===  BardScene ===
 
+ ~MCLetter = "D" 
+ ~MCEmotion = "Neutral"
+
 Raymond: Bard. What are you looking over here for?
 
 *   Red:  I'm seeing the face of someone who needs a little merriment. (sus up)
@@ -185,12 +188,16 @@ Raymond: Bard. What are you looking over here for?
 
 Barkeep: Reply 1: Nice to see you loosen that lead tongue of yours, Red!
 
+
+
 Raymond: Reply 2: Sure. (sus up)
     ~ susMeter += 1
 
 *   Red:  I listened in on what..uh, you just said to Ellie.
 *   Red:  Heard what you were talking about over there. (sus up a bit)
     ~ susMeter += 1
+    ~MCLetter = "D" 
+    ~MCEmotion = "Annoy"
 
 - Red: Loss can be hard to deal with.
 
@@ -198,12 +205,19 @@ Raymond: What do you know of loss, bard? You traipse around in your boots and yo
 
 * Red:  I have. I...uh...lost someone important to me too. Th-they meant a lot to me. (sus down)
     ~ susMeter -= 1
+    ~MCLetter = "D" 
+    ~MCEmotion = "Neutral"
 * Red:  No, I haven't. But I can lend an empathetic ear. (sus way up)
     ~ susMeter += 2
+    ~MCLetter = "D" 
+    ~MCEmotion = "Neutral"
 
 - Raymond: Sure, bard. (He takes a large swig of his drink.) I watched him die, you know? It's hard when you watch them die...
 
 Red: I'm sorry.
+
+    ~MCLetter = "D" 
+    ~MCEmotion = "Annoy"
 
 Raymond: Don't apologize. Don't apologize unless you did it! Unless you killed him! But you didn't kill him... that damned lord did. Bastard killed him in a duel.
 
@@ -223,6 +237,7 @@ Bartender: Oi Tim, come over here, let me get you a drink.
 
 *   Tim:  Yes, sir?
 *   Tim:  What is it you want? (sus up a little)
+~ susMeter += 1
     
 - Bartender: That guy that walked in...Feller, he's got a horse he left here. A beige horse. See to it, would you?
 
@@ -261,12 +276,14 @@ Bartender: ...get you another after you manage to hit the damn board. Laileth, y
 Raymond: You're the third person today to ask that. What's the deal?
 
 *   Patron:  No deal. I just don't like to see unhappy customers. (sus up a little)
+    ~ susMeter += 1
 *   Patron:  Look, I know what's happened to you. (sus up a lot)
     ~ susMeter += 2
 
 - Raymond: Word travels fast, eh?
 
 *   Patron:  I know. I know about Sharpe. I know about Corwell. I know how he killed him and how all anyone is doing is sweeping it under the rug. (sus way up)
+    ~ susMeter += 99
     Raymond:  ...you aren't supposed to know this. (GAME OVER)
     -> END
 *   Patron:  I mean...it's rather obvious, yes? You're sulking.

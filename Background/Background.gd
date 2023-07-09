@@ -20,7 +20,7 @@ func _ready():
 		"Bard":
 			$BardBackground.hide()
 		"Patroness":
-			
+			$PatronBackground.hide()
 		"GoodEnding":
 			$GoodEnding.hide()
 		"BadEnding":
@@ -41,6 +41,7 @@ func _ready():
 			$BardBackground.show()
 			temp = "Bard"
 		"Patroness":
+			$PatronBackground.show()
 			temp = "Patroness"
 		"GoodEnding":
 			$GoodEnding1.show()

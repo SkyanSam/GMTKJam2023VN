@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Background/Background.gd" type="Script" id=1]
 [ext_resource path="res://Background/background_GMTK_game_jam_2023.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Background/IMG_1542.png" type="Texture" id=7]
 [ext_resource path="res://Background/background_GMTK_game_jam_2023_4.png" type="Texture" id=8]
 [ext_resource path="res://Background/IMG_0138.png" type="Texture" id=9]
+[ext_resource path="res://Background/background_GMTK_game_jam_2023_6.png" type="Texture" id=10]
+[ext_resource path="res://Background/background_GMTK_game_jam_2023_5.png" type="Texture" id=11]
 
 [node name="Control" type="Control"]
 margin_right = 40.0
@@ -37,9 +39,17 @@ texture = ExtResource( 4 )
 visible = false
 texture = ExtResource( 3 )
 
+[node name="MaidTable" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 10 )
+
 [node name="BardBackground" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 8 )
+
+[node name="PatronBackground" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 11 )
 
 [node name="GoodEnding2" type="Sprite" parent="."]
 visible = false
