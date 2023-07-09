@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Notebook Scene/Input.gd" type="Script" id=1]
+[ext_resource path="res://Notebook Scene/notebook_thing_back_pt2.png" type="Texture" id=2]
+[ext_resource path="res://Notebook Scene/notebook_pages_pt2.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends PanelContainer
+
+
+# Declare member variables here. Examples:
+# var a: int = 2
+# var b: String = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+#	pass
+"
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[node name="notebook" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1219.0
+margin_right = 5.0
+rect_scale = Vector2( 1.00447, 1.02131 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -960.0
+margin_right = 960.0
+margin_bottom = 1080.0
+texture = ExtResource( 2 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = -960.0
+margin_right = 960.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 960, 540 )
+texture = ExtResource( 3 )
+
+[node name="Background" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -229.971
+margin_top = 176.244
+margin_right = -535.971
+margin_bottom = -303.756
+rect_scale = Vector2( 1.0038, 1 )
+custom_styles/panel = SubResource( 4 )
+script = SubResource( 5 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+margin_right = 400.0
+margin_bottom = 600.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Rows" type="VBoxContainer" parent="Background/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 380.0
+margin_bottom = 580.0
+
+[node name="Page" type="PanelContainer" parent="Background/MarginContainer/Rows"]
+margin_right = 360.0
+margin_bottom = 560.0
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 6 )
+
+[node name="Input Area" type="PanelContainer" parent="Background/MarginContainer/Rows/Page"]
+self_modulate = Color( 0.564706, 0.364706, 0.364706, 0 )
+margin_right = 360.0
+margin_bottom = 560.0
+size_flags_vertical = 3
+
+[node name="Input" type="TextEdit" parent="Background/MarginContainer/Rows/Page/Input Area"]
+modulate = Color( 0.65098, 0.141176, 0.141176, 1 )
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 353.0
+margin_bottom = 553.0
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 3 )
+wrap_enabled = true
+script = ExtResource( 1 )
