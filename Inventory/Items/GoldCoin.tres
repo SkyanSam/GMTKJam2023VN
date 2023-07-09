@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-description = ""
+description = "This gold coin will always show heads."
 hp_change = 0
 mana_change = 0

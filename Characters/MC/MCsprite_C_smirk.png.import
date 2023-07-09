@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MCsprite_B_blush.png-aa0e8dca4a2463ab0ea61f4eb84e7077.stex"
+path="res://.import/MCsprite_C_smirk.png-1b817d5ceba4f76bb7a426c0e2fa8b2e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/MCsprite_B_blush.png"
-dest_files=[ "res://.import/MCsprite_B_blush.png-aa0e8dca4a2463ab0ea61f4eb84e7077.stex" ]
+source_file="res://Characters/MC/MCsprite_C_smirk.png"
+dest_files=[ "res://.import/MCsprite_C_smirk.png-1b817d5ceba4f76bb7a426c0e2fa8b2e.stex" ]
 
 [params]
 

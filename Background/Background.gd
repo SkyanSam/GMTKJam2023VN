@@ -4,26 +4,37 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var temp
+var temp = "";
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$DummyScene.queue_free()
-	load("DummyScene")
+	match (temp):
+		"Tim":
+			
+		"Barkeeper":
+			$BarkeeperBackground.hide()
+			$BarkeeperDesk.hide()
+		"Maid":
+			$MaidBackground.hide()
+		"Bard":
+			
+		"Patroness":
+			
 	match (Global.story_manager.story.variableState["currentNPC"]):
 		"Tim":
-			temp = load().instance()
+			temp = "Tim"
 		"Barkeeper":
-			temp = load("BarkeeperBackground").instance()
-			add_child(temp)
-			temp = load("BarkeeperDesk'").instance()
+			$BarkeeperBackground.show()
+			$BarkeeperDesk.show()
+			temp = "Barkeeper"
 		"Maid":
-			temp = load("MaidBackground").instance()
+			$MaidBackground.show()
+			temp = "Maid"
 		"Bard":
-			temp = load().instance()
+			temp = "Bard"
 		"Patroness":
-			temp = load().instance()
-	add_child(temp)
+			temp = "Patroness"
+			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
