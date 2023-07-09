@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Characters/MC/MCsprite_D_annoy.png" type="Texture" id=1]
 [ext_resource path="res://Characters/MC/MCsprite_D_neutral.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Characters/MC/MCsprite_A_open.png" type="Texture" id=12]
 [ext_resource path="res://Characters/MC/MCsprite_C_neutral.png" type="Texture" id=13]
 [ext_resource path="res://Characters/MC/MCsprite_C_pissed.png" type="Texture" id=14]
+[ext_resource path="res://Characters/MC/MCsprite_D_uhh.png" type="Texture" id=15]
 
 [node name="Control" type="Control"]
 margin_right = 40.0
@@ -22,66 +23,71 @@ script = ExtResource( 4 )
 
 [node name="MCspriteAHappy" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1348, -138 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 8 )
 
 [node name="MCspriteANeutral" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1335, -111 )
 rotation = 0.0121317
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 7 )
 
 [node name="MCspriteAOpen" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1936, -380 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 12 )
 
 [node name="MCspriteBBlush" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1725, -461 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 9 )
 
 [node name="MCspriteBNeutral" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1577, -483 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 10 )
 
 [node name="MCspriteBSad" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1586, -421 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 5 )
 
 [node name="MCspriteBTouched" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1635, -228 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 11 )
 
 [node name="MCspriteCNeutral" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1730, -232 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 13 )
 
 [node name="MCspriteCPissed" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1694, -223 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 14 )
 
 [node name="MCspriteCSmirk" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1626, -174 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 6 )
 
 [node name="MCspriteDAnnoy" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1676, -79 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 1 )
 
 [node name="MCspriteDNeutral" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1573, -246 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 
 [node name="MCspriteDSurprise" type="Sprite" parent="."]
 visible = false
-position = Vector2( -1483, -331 )
+scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 3 )
+
+[node name="MCspriteDUhh" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 15 )

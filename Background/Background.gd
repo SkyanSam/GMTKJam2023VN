@@ -11,6 +11,7 @@ func _ready():
 	match (temp):
 		"Tim":
 			$TimBackground.hide()
+			$Horse.hide()
 		"Barkeeper":
 			$BarkeeperBackground.hide()
 			$BarkeeperDesk.hide()
@@ -26,6 +27,8 @@ func _ready():
 			
 	match (Global.story_manager.story.variablesState["currentNPC"]):
 		"Tim":
+			$TimBackground.show()
+			$Horse.show()
 			temp = "Tim"
 		"Barkeeper":
 			$BarkeeperBackground.show()
