@@ -16,9 +16,11 @@ margin_bottom = 40.0
 script = ExtResource( 1 )
 
 [node name="TimBackground" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 7 )
 
 [node name="Horse" type="Sprite" parent="."]
+visible = false
 position = Vector2( -24, -44 )
 scale = Vector2( 0.9, 0.9 )
 texture = ExtResource( 9 )
