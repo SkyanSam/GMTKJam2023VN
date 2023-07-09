@@ -58,6 +58,14 @@ public class StoryManager : Node2D
 		if (label != "") story.ChoosePathString(label);
 		Next();
 	}
+	public object GetVariable(string s)
+    {
+		return story.variablesState[s];
+    }
+	public void SetVariable(string s, object value)
+    {
+		story.variablesState[s] = value;
+	}
 	public void TriggerDialogue(string characterName, string characterSpeech)
 	{
 		string finalText = characterName == "" ? characterSpeech : characterName + ": " + characterSpeech;

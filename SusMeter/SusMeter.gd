@@ -13,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	status = Global.story_manager.story.variableState["susMeter"]
+	status = Global.story_manager.GetVariable("susMeter")
 	match (status):
 		0:
 			$sus1.hide()

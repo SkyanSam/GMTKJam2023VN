@@ -9,8 +9,8 @@ onready var rng : RandomNumberGenerator = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var temp_story_manager = get_node("/root/Game/StoryManager")
-	story_manager = temp_story_manager
+	#var temp_story_manager = get_node("/root/Game/StoryManager")
+	#story_manager = temp_story_manager
 	rng.randomize()
 	print("story_manager : " + str(story_manager))
 	pass

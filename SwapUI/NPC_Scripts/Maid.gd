@@ -8,12 +8,12 @@ extends TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Global.story_manager.story.variablesState["canUseMaid"] == true:
-		$Maid.show()
-	else: 
-		$Maid.hide()
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+func _process(delta: float) -> void:
+	if Global.story_manager.GetVariable("canUseMaid") == true:
+		show()
+	else: 
+		hide()

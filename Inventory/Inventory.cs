@@ -26,15 +26,15 @@ public class Inventory : Control
 	public override void _Ready()
 	{
 
-		inventoryItemChainBracelet = ResourceLoader.Load("InventoryItems/ChainBracelet.tres");
-		inventoryItemGloves = ResourceLoader.Load("InventoryItems/Gloves.tres");
-		inventoryItemGoldCoin = ResourceLoader.Load("InventoryItems/ChainBracelet.tres");
-		inventoryItemJadeNecklace = ResourceLoader.Load("InventoryItems/JadeNecklace.tres");
-		inventoryItemRemnant = ResourceLoader.Load("InventoryItems/Remnant.tres");
-		inventoryItemGhostlyGalleon = ResourceLoader.Load("InventoryItems/GhostlyGalleon.tres");
-		inventoryItemHorseBagScroll = ResourceLoader.Load("InventoryItems/HorseBagScroll.tres");
-		inventoryItemAlchoholDrink = ResourceLoader.Load("InventoryItems/AlchoholDrink.tres");
-		inventoryItemDarts = ResourceLoader.Load("InventoryItems/Darts.tres");
+		inventoryItemChainBracelet = ResourceLoader.Load("Inventory/Items/ChainBracelet.tres");
+		inventoryItemGloves = ResourceLoader.Load("Inventory/Items/Gloves.tres");
+		inventoryItemGoldCoin = ResourceLoader.Load("Inventory/Items/ChainBracelet.tres");
+		inventoryItemJadeNecklace = ResourceLoader.Load("Inventory/Items/JadeNecklace.tres");
+		inventoryItemRemnant = ResourceLoader.Load("Inventory/Items/Remnant.tres");
+		inventoryItemGhostlyGalleon = ResourceLoader.Load("Inventory/Items/GhostlyGalleon.tres");
+		inventoryItemHorseBagScroll = ResourceLoader.Load("Inventory/Items/HorseBagScroll.tres");
+		inventoryItemAlchoholDrink = ResourceLoader.Load("Inventory/Items/AlchoholDrink.tres");
+		inventoryItemDarts = ResourceLoader.Load("Inventory/Items/Darts.tres");
 		
 		itemDescription = (Label)GetNode("Description");
 
@@ -105,7 +105,7 @@ public class Inventory : Control
 	void Select(int x, int y)
 	{
 		itemBGNodes[nodePointerX, nodePointerY].Visible = true;
-		int itemID = (nodePointerX - 3) + (nodePointerY * 6);
+		int itemID = GetID(x, y);
 		if (itemID < inventoryItems.Count)
 			itemDescription.Text = (String)inventoryItems[itemID].Get("description");
 		else
