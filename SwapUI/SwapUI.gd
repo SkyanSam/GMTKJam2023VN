@@ -19,5 +19,14 @@ func _ready():
 
 
 func _on_TextureButton_pressed():
-	if !Global.story_manager.story.variablesState["canUseTim"]:
+	if Global.story_manager.story.variablesState["canUseTim"]:
 		Global.story_manager.story.variablesState["currentNPC"] = "Tim"
+	if Global.story_manager.story.variablesState["canUseBarkeeper"]:
+		Global.story_manager.story.variablesState["currentNPC"] = "Barkeeper"
+	if Global.story_manager.story.variablesState["canUseMaid"]:
+		Global.story_manager.story.variablesState["currentNPC"] = "Maid"
+	if Global.story_manager.story.variablesState["canUseBard"]:
+		Global.story_manager.story.variablesState["currentNPC"] = "Bard"
+	if Global.story_manager.story.variablesState["canUsePatroness"]:
+		Global.story_manager.story.variablesState["currentNPC"] = "Patroness"
+
