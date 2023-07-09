@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-description = ""
+description = "A ghostly galleon."
 hp_change = 0
 mana_change = 0
