@@ -118,6 +118,9 @@ Raymond: Feller. Raymond Feller.
 
 ===  EllegardScene ===
 
+ ~MCLetter = "B" 
+ ~MCEmotion = "Sad"
+
 *   Ellegard:  Drowning your sorrows?
     Raymond:  Yeah, sure. Something like that.
 *   Ellegard:  Need some company?
@@ -130,6 +133,9 @@ Raymond: (Grunts.) You first.
 *   Ellegard :  I've been here...just making a living doing this. Not really a fan of it...
     That's not true Ellie, you love this work. Ever since yer father made you get a job off that farm...
 *   Ellegard :  I'm here to find a hero and...help him out a bit.
+
+ ~MCLetter = "B" 
+ ~MCEmotion = "Neutral"
 
 -
 
@@ -149,6 +155,9 @@ Raymond: Reply 2: Hmm? What did you say?
 
 (If your suspicion meter gets too high, the characters will realize you're not one of them!)
 Options 1a and 2b lead to a GAME OVER screen.
+
+ ~MCLetter = "B" 
+ ~MCEmotion = "Sad"
 
 Raymond: Well girl, I don't have much to tell. Only person in my life is gone.
 
